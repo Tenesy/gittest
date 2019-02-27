@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dsadasda</title>
+</head>
+<body>
+
+	<script>
+		document.title = "dr423123"
+	var  arr = [1,1,2,2,3,3];
+	var  min, max;
+	var  minimum = arr[0], maxsimum = arr[1],t = 1, x = true;
+	for (var i = 0; i < arr.length; i+=2) {
+		if (arr[i] < arr[i+1]) {
+			min = arr[i];
+			max = arr[i+1]
+		}
+		else{
+			min = arr[i+1];
+			max = arr[i];
+		}
+		if (min <= minimum && maxsimum <= max) {
+			minimum = min;
+			maxsimum = max;
+			t++
+		}
+	}
+	for (var j = 0; j < arr.length; j+=2) {
+		if(minimum <= arr[j] && minimum <= arr[j+1] && maxsimum >= arr[j] && maxsimum >= arr[j+1] ){
+			
+		}
+		else{
+			x = false;
+			break;
+		}
+	}
+	if (x == false) {
+		document.write(-1)
+	}
+	else{
+		document.write(t)
+	}
+</script>
+</body>
+</html>
